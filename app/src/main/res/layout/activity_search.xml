@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/source_card"
+        android:backgroundTint="#dddddd"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/source"
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="Enter Source"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dest_card"
+        android:backgroundTint="#dddddd"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/flip">
+    <TextView
+        android:id="@+id/destination"
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:text="Enter Destination"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/sear"
+        android:layout_below="@+id/dest_card"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        />
+    <!--<Button
+        android:id="@+id/flip"
+        android:layout_toLeftOf="@+id/sear"
+        android:layout_below="@+id/dest_card"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flip"/>-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flip"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/source_card"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="#413CF8"
+        app:cardCornerRadius="15dp"
+        android:layout_centerHorizontal="true">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_swap_vert_24"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#413CF8"
+        android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

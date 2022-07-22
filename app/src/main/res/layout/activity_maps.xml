@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+<androidx.fragment.app.FragmentContainerView
+    android:id="@+id/map1"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity"
+    />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_place_24"
+        android:layout_centerInParent="true"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+    <fragment
+        android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        />
+    </androidx.cardview.widget.CardView>
+    <!--
+    <Button
+        android:id="@+id/loc"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Loc"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="7dp"/>-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loc"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        map:cardCornerRadius="30dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="10dp">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/ic_baseline_my_location_24"/>
+    </androidx.cardview.widget.CardView>
+   <!-- <Button
+        android:id="@+id/search_path"
+        android:layout_above="@+id/loc"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        />-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_path"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/loc"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        map:cardCornerRadius="10dp"
+        >
+    <ImageView
+        android:src="@drawable/ic_baseline_directions_24"
+        android:layout_height="match_parent"
+        android:background="#413CF8"
+        android:padding="5dp"
+        android:layout_width="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
