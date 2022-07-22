@@ -101,7 +101,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     GetDirection(URL).execute()*/
                     dest=place.latLng!!
                     isDestSet=true
-                    var path=Path(currPos,place.latLng!!,mMap)
+                    Path(currPos,place.latLng!!,mMap)
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(currPos))
                     //Thread.sleep(1000)
                    /* while(path.list.size==0)
                     {
@@ -184,6 +185,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 dest=destn
                 isDestSet=false
                 Path(source,destn,mMap)
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(currPos))
 
             } else if (resultCode == RESULT_CANCELED) {
 

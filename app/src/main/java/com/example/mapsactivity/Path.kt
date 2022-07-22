@@ -22,7 +22,7 @@ class Path(var currPos:LatLng,var dest: LatLng,var mMap: GoogleMap) {
         getDirectionURL(currPos, dest)
        // Log.w("GoogleMap", "URL : $URL")
         GetDirection().execute()
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(currPos))
+   //     mMap.moveCamera(CameraUpdateFactory.newLatLng(currPos))
     }
 
     fun getDirectionURL(origin: LatLng, dest: LatLng) {
